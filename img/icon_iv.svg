@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+  <g id="组_170" data-name="组 170" transform="translate(-931 -1898)">
+    <rect id="矩形_84" data-name="矩形 84" width="22" height="22" transform="translate(931 1898)" fill="none"/>
+    <g id="组_4" data-name="组 4" transform="translate(747.243 1734.882)">
+      <path id="路径_1" data-name="路径 1" d="M202.491,165.118H187.023a.266.266,0,0,0-.266.266v1.734a3,3,0,0,1,0,6v1.734a.266.266,0,0,0,.266.266h15.468a.266.266,0,0,0,.266-.266v-9.468A.266.266,0,0,0,202.491,165.118Z" fill="none" stroke="#a0a0a0" stroke-miterlimit="10" stroke-width="1"/>
+      <g id="组_3" data-name="组 3">
+        <g id="组_2" data-name="组 2">
+          <line id="直线_2" data-name="直线 2" y1="1.928" x2="2.698" transform="translate(195.559 166.58)" fill="none" stroke="#a0a0a0" stroke-miterlimit="10" stroke-width="1"/>
+          <line id="直线_3" data-name="直线 3" x2="2.698" y2="1.928" transform="translate(193.376 166.58)" fill="none" stroke="#a0a0a0" stroke-miterlimit="10" stroke-width="1"/>
+        </g>
+        <line id="直线_4" data-name="直线 4" y2="5.808" transform="translate(195.757 167.848)" fill="none" stroke="#a0a0a0" stroke-miterlimit="10" stroke-width="1"/>
+        <line id="直线_5" data-name="直线 5" x2="5" transform="translate(193.257 169.408)" fill="none" stroke="#a0a0a0" stroke-miterlimit="10" stroke-width="1"/>
+        <line id="直线_6" data-name="直线 6" x2="5" transform="translate(193.257 171.266)" fill="none" stroke="#a0a0a0" stroke-miterlimit="10" stroke-width="1"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,301 @@
+@charset "utf-8";
+/* title section */
+
+/* payment method section */
+#pay-meth, #order-rev {
+	background-color: #fff;
+	margin-top: 6px;
+	position: relative;
+}
+#pay-meth p.title, #pay-meth p.content, #order-rev p.content {
+	padding-left: 16px;
+}
+#pay-meth p.title, #order-rev p.title {
+	font-size: 13px;
+	color: #A0A0A0;
+	padding-top: 14px;
+}
+#pay-meth p.content {
+	font-size: 15px;
+	color: #4A4A4A;
+	padding-top: 5px;
+	padding-bottom: 14px;
+}
+
+/* order review section */
+#order-rev .oder-rev-wrap, #order-rev .price-wrap {
+	border-bottom: 1px solid #D3D3D3;
+	margin: 0 16px;
+}
+#order-rev .order-rev-img {
+    float: left;
+    width: 80px;
+    height: 80px;
+    padding-top: 18px;
+    overflow: hidden;
+}
+#order-rev .order-rev-img img {
+	margin: 0 auto;
+}
+#order-rev .order-rev-info {
+	display: inline-block;
+    padding-top: 18px;
+    padding-bottom: 14px;
+    margin-left: 16px;
+}
+#order-rev .order-rev-info p, #pro-price {
+	font-size: 15px;
+	color: #4A4A4A;
+	line-height: 150%;
+	padding-left: 0;
+}
+#order-rev .order-rev-info {
+	padding-left: 16px;
+}
+/* quantity */
+.order-rev-info #quantity-inner {
+	padding-top: 14px;
+}
+input#decrease {
+	border-radius: 4px 0 0 4px;
+	outline: none;
+}
+input#increase {
+	border-radius: 0 4px 4px 0;
+	outline: none;
+}
+.operate, .amount {
+	display: inline-block;
+	text-align: center;
+	border: 1px solid #D3D3D3;
+	line-height: 28px;
+	height: 28px;
+	float: left;
+	font-size: 16px;
+	text-align: center;
+}
+.operate {
+	width: 28px;
+	background-color: #fff;
+}
+.amount {
+	width: 46px;
+	height: 26px;
+	border-left: none;
+	border-right: none;
+}
+/* price section */
+.price-wrap {
+	padding-top: 14px;
+	padding-bottom: 14px;
+}
+.price-wrap .price-item {
+	float: left;
+	height: auto;
+}
+.price-wrap .price {
+	float: right;
+	height: auto;
+}
+.price-wrap p {
+	font-size: 15px; 
+	line-height: 160%;
+}
+.price-wrap p.price-item-name {
+	color: #A0A0A0;
+}
+.price-wrap .price-amount {
+	color: #4A4A4A;
+	text-align: right;
+}
+/* pay section */
+.pay {
+    padding: 0 16px;
+    height: 44px;
+    position: relative;
+}
+.pay::after {
+	content: "";
+	height: 50px;
+}
+.pay .pay-title {
+	color: #A0A0A0;
+	font-size: 15px;
+	float: left;
+	line-height: 44px;
+}
+.pay .pay-info {
+	color: #4A4A4A;
+	font-size: 15px;
+	font-weight: bold;	
+	line-height: 44px;
+	float: right;
+	padding-right: 25px;
+}
+/* instalment */
+#instalment-bgd {
+	width: 100%;
+	height:100%;
+	position: fixed;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.3);
+	display: none;
+}
+#payment {
+	width: 100%;
+	height:100%;
+	position: fixed;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.3);
+	display: none;
+}
+#instalment-bgd .instalment-wrap {
+	width: 100%;
+	height:300px;
+	background-color: white;
+	position: fixed;
+	bottom: 0;
+	padding:16px 16px 48px;
+	box-sizing: border-box;
+}
+#payment .pay-container {
+	width: 100%;
+	height:415px;
+	background-color: white;
+	position: fixed;
+	bottom: 0;
+	box-sizing: border-box;
+}
+
+#instalment-bgd p {
+	font-size: 17px;
+	color: #A0A0A0;
+}
+#instalment-bgd p span {
+	font-size: 17px;
+	color: #4A4A4A;
+	font-weight: bold;
+}
+#instalment-bgd ul {
+	padding-top: 24px;
+}
+#instalment-bgd li {
+	float: left;
+	width: 100px;
+    height: 50px;
+    border: 1px solid #BBBBBB;
+    border-radius: 4px;
+	margin-right: 19px; 
+    text-align:center;
+    margin-bottom:24px;
+    padding-top: 8px;
+}
+#instalment-bgd li:nth-last-child(3) {
+	margin-right: 18px; 
+}
+#instalment-bgd li:nth-last-child(2) {
+	margin-right: 0; 
+}
+#instalment-bgd li a {
+    font-size: 15px;
+    color: #4A4A4A;   
+    line-height: 150%;
+}
+#instalment-list .li-selected {
+    border: 1px solid #FE5944;
+}
+/* password input */
+#payment .pay-title {
+	width: 100%;
+	position: relative;
+}
+#payment .title {
+	font-size: 17px;
+	color: #4A4A4A;
+	text-align: center;
+	padding: 16px 16px 12px;
+}
+.layer-close {
+	width: 18px;
+	height: 18px;
+	background: url(../img/icon-close.svg) no-repeat;
+	position: absolute;
+	right: 16px;
+	top: 16px;
+}
+#payment .payinfo {
+	font-size: 15px;
+	color: #B10606;
+	text-align: center;
+	padding:0 16px 30px;
+	line-height: 160%;
+}
+.pwd-box {
+	height: 54px;
+	position: relative;
+	border: 1px solid #9B9B9B;
+	border-radius: 4px;
+	margin: 0 16px;
+}
+.pwd-box input[type="tel"] {
+	width: 100%;
+	height: 54px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: none;
+	font-size: 16px;
+	color: transparent;
+	opacity: 0;
+	z-index: 1;
+	letter-spacing: 35px;
+}
+/*
+.pwd-box input:focus { 密码框聚焦时改变位置，否则IOS上会有闪烁的光标 
+	left: -1000px;
+	top:-100px;
+} 
+*/
+
+.fake-box input {
+	width: 15.4%;
+	height: 54px;
+	border: none;
+	border-right: 1px solid #9B9B9B;
+	text-align: center;
+	font-size: 30px;
+	background-color:transparent; /*  input last child 会折行挡住线框，使用背景透明 */
+}
+.fake-box input:nth-last-child(1) { /* 选择input最后一个元素 */
+	border:none;
+}
+#payment .forgot {
+	font-size: 15px;
+	color: #FE5944;
+	margin-right: 16px;
+	padding-top: 7px;
+	padding-bottom: 30px;
+	text-align: right;
+}
+.payment .keyboard {
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

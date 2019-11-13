@@ -1,0 +1,58 @@
+@charset "utf-8";
+#top-bar {
+	border-bottom: 1px solid #D3D3D3;
+}
+/* 列表 */
+.wrap, .wrap2 {
+	background-color: #fff;
+	width: 100%;
+	position: relative;
+}
+.card-list li {
+	padding: 12px 0;
+	border-bottom: 1px solid #D3D3D3;
+	margin-left: 16px;
+	position: relative;
+	display: block;
+}
+.card-list li p.title {
+	font-size: 17px;
+	color: #4A4A4A;
+}
+.card-list li p.explain {
+	font-size: 13px;
+	color: #A0A0A0;
+}
+.card-list li .card-cur {
+	width: 16px;
+	height: 12px;
+	background: url(../img/icon-select.svg) no-repeat;
+	position: absolute;
+	right: 16px;
+	top:50%;
+	transform: translateY(-50%);
+
+}
+/* 推荐 */
+.rec p {
+	font-size: 15px;
+	color: #A0A0A0;
+	margin: 20px 16px 2px 16px;
+
+}
+.rec p strong {
+	color: #4A4A4A;
+}
+/* 推荐列表 */
+.wrap2 .actBtn {
+    width: 70px;
+    height: 30px;
+    border-radius: 4px;
+    border: none;
+    font-size: 15px;
+    text-align: center;
+	position: absolute;
+	right: 16px;
+	top:50%;
+	transform: translateY(-50%);
+}

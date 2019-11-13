@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>yiqihuaS2</title>
+	<link rel="stylesheet" href="./css/yiqihuaS2.css" type="text/css">
+	<link rel="stylesheet" href="./css/base.css" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<!-- S title bar  -->
+	<div id="title-bar" class="clearfix">
+		<div class="title-bar-back">
+			<a href="javascript:history.go(-1);" class="icon-back"></a>
+		</div>
+		<h1>Yiqihua Credit</h1>
+		<div id="close" onclick="window.location.href='pay-meth.html'"><img src="./img/icon-close.svg" alt="close"></div>
+	</div>
+	<!-- E title bar  -->
+	<!-- S steps bar  -->
+	<div class="steps clearfix">
+					<ul class="steps-container">
+						<li class="finished progressbar" onclick="window.history.go(-1)">
+							<div class="step first"></div>
+							<div class="step-image"><span></span></div>
+							<div class="step-description">Identification</div>
+						</li>
+						<li class="activated progressbar">
+							<div class="step"></div>
+							<div class="step-image"><span></span></div>
+							<div class="step-description">Emergency contact</div>
+						</li>
+						<li class="progressbar">
+							<div class="step"></div>
+							<div class="step-image"><span></span></div>
+							<div class="step-description">Credit certification</div>
+						</li>
+						<li class="progressbar">
+							<div class="step last"></div>
+							<div class="step-image"><span></span></div>
+							<div class="step-description">Activation</div>
+						</li>
+					</ul>
+				</div>			
+	<!-- E steps bar  -->
+	<!-- S content  -->
+	<div class="content">
+		<p>The information you filled will be used as emergency contact when you can not be reached.  </p>
+		<form action="" id="form" name="form">
+			<input type="number" name="phone" onchange="check()" pattern="^\d{11}$" placeholder="Emergency contact phone">
+			<input type="text" name="name" onchange="check()" placeholder="Emergency contact name">
+			<input type="text" class="last" id="last" name="relationship" onchange="check()" placeholder="Relationship with you">
+		</form>
+		<button id="round-rect-btn">Next</button>
+	</div>
+	<!-- E content  -->
+	<script type="text/javascript">
+		// 在所有input 的 value 都!= “”的情况下，btn 改变可点
+		function check() {
+			if(document.form.phone.value == "" || document.form.name.value == "" || document.form.relationship.value == "") {
+				return false;
+			}
+			else {
+				document.getElementById("round-rect-btn").style.opacity = "1.0";
+				document.getElementById("round-rect-btn").onclick = function () {
+					window.open("yiqihuaS3.html", "_self");
+				}
+			}
+			
+		}
+
+	</script>
+
+</body>
+</html>

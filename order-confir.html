@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Order Confirmation</title>
+	<title>Product Detail</title>
+	<link rel="stylesheet" href="./css/order-confir.css" type="text/css">
+	<link rel="stylesheet" href="./css/base.css" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<!-- S title bar  -->
+	<div id="title-bar" class="clearfix">
+		<div class="title-bar-back">
+			<a href="index.html" class="icon-back"></a>
+		</div>
+		<h1>Order Confirmation</h1>
+	</div>
+	<!-- E title bar  -->
+
+    <!-- S shipping address  -->
+    <div id="top-bar" onclick="openWinAdd()">
+    	<div class="add"></div>
+    	<p>Add an address</p>
+    </div>
+    <!-- E shipping address  -->
+
+    <!-- S payment method  -->
+    <div id="pay-meth" onclick="openWinPay()">
+    	<p class="title">Payment Method</p>
+    	<p class="content">Debit Card****8888</p>
+    	<div class="icon-enter"></div>
+    </div>
+    <!-- E payment method  -->
+
+    <!-- S order review  -->
+    <div id="order-rev" class="clearfix">
+    	<div class="oder-rev-wrap">
+	    	<p class="title">Order review</p>
+	    	<div class="order-rev-img clearfix"><img src="./img/img-pro-ord.png" alt=""></div>
+	    	<div class="order-rev-info">
+		    	<p class="content">
+	    		iPhone Plus full Netcom 4G <br>
+	    		<p>￥<input type="number" name="pro-price" id="pro-price" value="6888"></p>
+	    		<!-- 金额自动取自？ -->
+	    		<p>Space Gray, 128GB</p> <!-- 此处需要从前页读取数据 -->
+		    	</p>
+	    	    <div id="quantity-inner"> <!-- 只允许input 输出数字1-99的方法？-->
+			    	<input class="operate" id="decrease" type="button" value="-"><input class="amount" id="amount" type="text" name="quantity" value="1" onkeyup="this.value=this.value.replace(/[^\d]/,'')"><input class="operate" id="increase" type="button" value="+">
+				</div>
+			</div>
+		</div>
+		<div class="price-wrap clearfix">
+			<div class="price-item">
+				<p class="price-item-name">
+					Product price <br>
+					Coupon <br>
+					Shipping <br>
+					Total
+				</p>
+			</div>
+			<div class="price">
+				<div class="price-amount">
+					<p id="price">￥6888</p>  <!-- 金额 = 金额自动取自 X 数量 -->
+					<p id="coupon">￥0</p>   <!-- 金额自动取自？ -->
+					<p id="shipping">￥0</p>   <!-- 金额自动取自？ -->
+					<p id="total">￥6888</p>   <!-- 总金额 = 金额自动相加？ -->
+				</div>
+			</div>
+		</div>
+		<div class="pay clearfix" id="showBox">
+			<p class="pay-title">You pay</p>
+			<p class="pay-info" id="pay-info">￥574/mo, for 12mo</p> <!-- 总金额/12 -->
+			<div class="icon-enter"></div>
+		</div>
+    </div>
+    <!-- E order review  -->
+
+    <!-- S submit buttom  -->
+    <button id="bottom-btn" onclick="pay()">Place your order</button>
+    <!-- E submit buttom  -->
+	
+	<!-- S stalment option  -->
+	<div id="instalment-bgd">
+		<div class="instalment-wrap">
+			<div class="layer-close" id="ins-close"></div>
+			<p><span>Intrest-free</span> installment or Full pay</p>
+			<ul id="instalment-list" class="clearfix">  <!-- 如何自动计算从总计/分期数 -->
+				<li><a href="#" id="12mo">￥574/mo, for 12mo</a></li>
+				<li><a href="#" id="9mo">￥765.33/mo, for 9mo</a></li>
+				<li><a href="#" id="6mo">￥1184/mo, for 6mo</a></li>
+				<li><a href="#" id="full">￥6888 Full pay</a></li>
+			</ul>
+			<button type="submit" id="bottom-btn" onclick="submit()">Confirm</button>
+		</div>
+	</div>
+
+	<!-- E stalment option  -->
+	<!-- S password section -->
+	<div id="payment">
+		<div class="pay-container">
+			<div class="pay-title"><p class="title">Payment Code</p><div class="layer-close" id="pay-close"></div></div>
+			<p class="payinfo" id="payinfo">You will pay ￥574 from Yiqihua Credit Pay</p>
+			<div class="pwd-box">
+				<input type="tel" maxlength="6" class="pwd-input" id="pwd-input">
+				<div class="fake-box" id="fake-box">
+					<input type="password" value="">
+					<input type="password" value="">
+					<input type="password" value="">
+					<input type="password" value="">
+					<input type="password" value="">
+					<input type="password" value="">
+				</div>
+			</div>
+			<p class="forgot clearfix">Forgot code</p>
+			<div class="keyboard" id="keyboard"><img src="./img/keyboard.svg" alt=""></div>
+		</div>
+		
+	</div>
+	<!-- E password section -->
+
+<script>
+	//获取地址
+    window.onload = function getQueryString(name) {
+    	// decodeURI(window.location.href);
+		var reg = /=([^&]*)(&|$)/gi;
+		var r = window.location.search.substr(1).match(reg); //获取URI地址里？后面的参数字段，并匹配一个正则表达得到键值对中的值
+		var contact = r[0].replace(/(=)(\w+)(&)/g,"$2"); //去除contact值的=和&符号
+		var mobile = r[1].replace(/(=)(\w+)(&)/g,"$2");
+		var city = r[2].replace(/(=)(\w+)(&)/g,"$2");
+		var street = unescape(decodeURI(r[3])).replace(/[\=\+\&]/g, "");//解决URI特殊符号乱码显示，并replace =+&符号 为 空白
+		var topBar = document.getElementById("top-bar");
+		// var address = contact + " " + mobile + " " + city + " " + street;
+		for(var i in r) {
+			if(r[i] === null) {
+				topBar.innerText = topBar.innerText;
+			} else {
+				// topBar.innerText = address;
+				topBar.style.color = "#4A4A4A";
+				topBar.style.fontSize = "17px";
+				topBar.style.padding = "16px";
+				topBar.style.lineHeight = "160%";
+				topBar.style.wordBreak = "break-all";//让div里的文字自动换行
+				topBar.innerHTML = contact + "<br>" + mobile + "<br>" + city + " " + street; //用“html标签” + var变量，换掉top-bar里的html内容和样式
+
+			}
+		}
+		
+		// if(r != null) {
+		// 	return r[2];
+		// } else {
+		// 	return null;
+		// }
+	}
+	//打开地址添加页
+	function openWinAdd() {
+		window.open("address.html","_self");
+		// document.getElementById("top-bar").innerHTML = "display address";
+	}
+	//打开付款方式页
+	function openWinPay(){
+		window.open("pay-meth.html","_self");
+	}
+	//订单预览，数量增减器 中间区域限制类型为数字，最小1，最大10
+		var inc = document.getElementById("increase"); //此处getElementsByClassName（“operate”）获取不到？？？
+		var dec = document.getElementById("decrease");
+		var amount = document.getElementById("amount");
+		var price = document.getElementById("price");
+		var total = document.getElementById("total");
+		var payInfo = document.getElementById("pay-info");
+		// typeOf(amount.value) === number;
+		// min.amount.value === 0;
+		// max.amount.value ===10;
+		inc.onclick = function() {
+			amount.value = parseInt(amount.value) + 1;
+			// max.amount.value ===10;			
+			price.innerHTML = "￥"+ 6888 * amount.value;
+			total.innerHTML = price.innerHTML;
+			payInfo.innerHTML = "￥" + 6888*amount.value/12 + "/mo,for 12mo";
+		}
+		dec.onclick = function() {
+			if(amount.value > 1){
+				amount.value = parseInt(amount.value) - 1;
+				price.innerHTML = "￥"+ 6888 * amount.value;
+				total.innerHTML = price.innerHTML;
+				payInfo.innerHTML = "￥" + 6888*amount.value/12 + "/mo,for 12mo";
+			}
+		}
+	//分期金额随价格变化而变化
+	showBox = document.getElementById("showBox");
+	showBox.onclick = function(){
+		var installmentBox = document.getElementById("instalment-bgd");
+		document.getElementById("12mo").innerHTML = "￥" + parseInt(6888*amount.value/12) + "/mo, for 12mo";
+		document.getElementById("9mo").innerHTML = "￥" + parseInt(6888*amount.value/9) + "/mo, for 9mo";
+		document.getElementById("6mo").innerHTML = "￥" + parseInt(6888*amount.value/6) + "/mo, for 6mo";
+		document.getElementById("full").innerHTML = "￥" + parseInt(6888*amount.value) + ", full pay";
+        installmentBox.style.display = "block";
+	}
+
+    //关闭各弹窗
+	var insClose = document.getElementById("ins-close"),
+	payClose = document.getElementById("pay-close"),
+	insBg = document.getElementById("instalment-bgd"),
+	payment = document.getElementById("payment");
+	insClose.onclick = function() {
+		insBg.style.display = "none";
+	}
+	payClose.onclick = function() {
+		payment.style.display = "none";
+	}
+    //分期弹窗选项，选中效果及传值去前页
+	var ul = document.getElementById("instalment-list"),
+	li = ul.getElementsByTagName("li");
+	for(var i = 0; i<li.length; i++) {
+		li[i].onclick = function() {
+			for(var k = 0; k<li.length; k++) {
+				li[k].className = "";
+			}
+			this.className = "li-selected";
+			payInfo.innerText = this.innerText;
+			// alert(payInfo);
+		}
+	}
+	//分期确认按钮关闭弹窗
+	function submit() {
+		// payInfo.innerHTML = ;
+		insBg.style.display = "none";
+
+		// window.location.href = "order-confir.html";
+	}
+	
+    //进入付款流程
+	function pay() {
+		payment.style.display = "block";
+		var payinfo = document.getElementById("payinfo"),
+		payAmount = payInfo.innerText.match(/\d+/), //取you pay里面分期金额数字
+		str = payinfo.innerText;  //生成一个字符串变量，密码输入弹窗页面的付款金额提示
+		payinfo.innerText = str.replace(/\d+/, payAmount); //替换付款页面字符串中的数字部分为前页面you pay里的分期金额数字	
+		// alert(payAmount);
+	}
+	//付款流程页，键盘点击，显示密码掩码
+	var keyboard = document.getElementById("keyboard");
+	var input = payment.getElementsByTagName("input");
+	keyboard.onclick = function() {
+		// alert(input.length);
+		for(var i=1; i<input.length; i++) {
+			if(input[i].value === "") {
+				input[i].value = "1";
+				return false;
+			} 			
+		}
+		if(i = 6) {
+				window.location.href = "payment-result.html";
+			}
+		
+	}
+
+
+</script>
+</body>
+</html>
+
+
+
+

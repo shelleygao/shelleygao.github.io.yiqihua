@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>yiqihuaS3</title>
+	<title>yiqihuaS2</title>
+	<link rel="stylesheet" href="./css/yiqihuaS3.css" type="text/css">
+	<link rel="stylesheet" href="./css/base.css" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<!-- S title bar  -->
+	<div id="title-bar" class="clearfix">
+		<div class="title-bar-back">
+			<a href="javascript:history.go(-1);" class="icon-back"></a>
+		</div>
+		<h1>Yiqihua Credit</h1>
+		<div id="close" onclick="window.location.href='pay-meth.html'"><img src="./img/icon-close.svg" alt="close"></div>
+	</div>	
+	<!-- E title bar  -->
+	<!-- S steps bar  -->
+	<div class="steps clearfix">
+					<ul class="steps-container">
+						<li class="finished progressbar" onclick="window.history.go(-2)">
+							<div class="step first"></div>
+							<div class="step-image"><span></span></div>
+							<div class="step-description">Identification</div>
+						</li>
+						<li class="finished progressbar" onclick="window.history.go(-1)">
+							<div class="step"></div>
+							<div class="step-image"><span></span></div>
+							<div class="step-description">Emergency contact</div>
+						</li>
+						<li class="activated progressbar">
+							<div class="step"></div>
+							<div class="step-image"><span></span></div>
+							<div class="step-description">Credit certification</div>
+						</li>
+						<li class="progressbar">
+							<div class="step last"></div>
+							<div class="step-image"><span></span></div>
+							<div class="step-description">Activation</div>
+						</li>
+					</ul>
+				</div>			
+	<!-- E steps bar  -->
+	<!-- S content  -->
+	<div class="content">
+		<div class="zhima">
+			<img src="./img/zhimalogo.svg" alt="#" class="zhimalogo">
+			<div id="finished"></div>
+		</div>
+	
+	<p id="title">Zhima Credit Certification</p>
+	<p id="description">Finishing Zhima credit certification can help improve Mashanghua pass rate</p>
+	<button id="round-rect-btn">Go</button>
+</div> <!-- window.location.href=''属性将当前页面定位或将你带到其它网站，window.open()方法在新窗口打开一个链接 -->
+	<!-- E content  -->
+	<script type="text/javascript">
+		document.body.onclick = function(){
+			// document.getElementById("round-rect-btn").onclick = function(){
+			// 	window.location.href = 'https://zmxy.open.alipay.com/channel/zhimaIndex.htm';
+			// }
+			document.getElementById("finished").style.display = "inline-block";
+			document.getElementById("title").innerHTML = "Congratulations! ";
+			document.getElementById("description").innerHTML = "Your Zhima credit certification is successful.";
+			document.getElementById("round-rect-btn").innerHTML = "Next";
+			document.getElementById("round-rect-btn").style.opacity = "1.0";
+			document.getElementById("round-rect-btn").onclick = function(){
+				window.location.href = "yiqihuaS4.html";
+			}
+		}
+	</script>
+
+</body>
+</html>

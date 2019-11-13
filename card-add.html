@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Card Add</title>
+	<link rel="stylesheet" href="./css/card-add.css" type="text/css">
+	<link rel="stylesheet" href="./css/base.css" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div id="title-bar" class="clearfix">
+		<div class="title-bar-back">
+			<a href="#" onclick="window.history.back()" class="icon-back"></a>
+		</div>
+		<h1>Add a card</h1>
+		<a href="order-confir.html" class="text-link">Add</a>  <!-- 把信息收集到order confirm页 -->
+	</div>
+
+	<form id="form" action="">
+		<div class="wrap">			
+			<input class="form-info" name="number" type="number" pattern="[0-9]*" placeholder="Card number">
+			<div class="camera-box icon-right"></div>
+		</div>
+		<input class="form-info" name="name" type="text" placeholder="Name on card">
+		<div class="wrap">
+			<input class="form-info" name="date" type="text" placeholder="MM/YY (Expire Date)">
+            <div class="cue-box icon-right"></div>
+		</div>
+		<div class="wrap">
+			<input class="form-info" name="CVV2" type="text" placeholder="CVV2">
+            <div class="cue-box icon-right"></div>
+		</div>
+	</form>
+
+</body>
+</html>

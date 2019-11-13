@@ -1,0 +1,50 @@
+@charset "utf-8";
+.content {
+	background-color: #fff;
+	padding: 20px 0 113px;
+}
+.content .intro {
+	padding: 0 16px;
+	color: #4A4A4A;
+}
+form {
+	border-top: 1px solid #D3D3D3;
+	border-bottom: 1px solid #D3D3D3;
+	margin-bottom: 132px;
+	margin-top: 12px;
+}
+form div {
+	margin-left: 16px;
+	padding: 13px 16px 13px 0;
+}
+form .form-card, form .form-mobile {
+	border-bottom: 1px solid #D3D3D3;
+}
+.content .title {
+	font-size: 15px;
+	color: #A0A0A0;
+}
+.content .info, .content input {
+	font-size: 17px;
+	color: #4A4A4A;
+}
+input {
+	outline-style: none;
+	border:none;
+}
+#border-btn {
+	font-size: 15px;
+	width: 107px;
+	height: 30px;
+	float: right;
+	position: relative;
+	top: -14px;
+}
+/* btn */
+div.content button#round-rect-btn {
+	opacity: 0.5;
+	position: absolute;
+	bottom: 54px;
+	left: 50%;
+	transform: translateX(-50%);
+}

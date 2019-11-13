@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Yiqihua Homepage</title>
+	<link rel="stylesheet" href="./css/yiqihuaHome.css" type="text/css">
+	<link rel="stylesheet" href="./css/base.css" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<!-- S title bar  -->
+	<div id="title-bar" class="clearfix">
+		<div class="title-bar-back">
+			<a href="javascript:history.go(-1);" class="icon-back"></a>
+		</div>
+		<h1>Yiqihua Credit</h1>
+	</div>
+	<!-- E title bar  -->
+	<div class="wrap">
+		<div class="img">
+			<img src="./img/yiqihua.svg" alt="yiqihua">
+	    </div>
+	    <div id="content" class="content">
+			<p>Activate the Yiqihua Credit Pay, you’ll quickly get a high credit limit, zero down payment, interest-free installment, low rate late repayment.</p>
+			<div class="yiqihuaLogo"><img src="./img/yiqihuaLogo.svg" alt="logo"></div>
+	    </div>
+	    <div id="contentNext" class="contentNext">
+	    	<div class="proInfo clearfix">
+		    	<div id="radioBtn" onclick="choose()"><img id="check" src="./img/radio.svg" alt="radio"></div>
+		    	<p>agree to <a href="#">User Agreement</a> and <a href="#">User Authorization</a></p>
+	    	</div>
+	    	<button id="round-rect-btn" onclick="openStep1()">Start</button>
+	    </div>
+		<div id="circle" onclick="next()">
+			<div id="cur" class="cur"></div>
+			<div id="default" class="default"></div>
+		</div>
+	</div>
+<script type="text/javascript">
+	function next() {
+		var c = document.getElementById("content");
+		var cn = document.getElementById("contentNext");
+		var circle = document.getElementById("circle");
+		var cur = document.getElementById("cur");
+		var def = document.getElementById("default");
+		if (cn.style.display === "block") { //一个等于=不起作用，必须用===，因为此处condition需要为true才执行以下语句：
+			cn.style.display = "none";
+			c.style.display = "block";
+			cur.setAttribute("style", "background-color:#D3D3D3");
+			def.setAttribute("style", "background-color: #fff");
+		} else {
+			c.style.display = "none";
+			cn.style.display = "block";
+			cur.setAttribute("style", "background-color: #fff"); // 设置属性（html内部属性），语法.setAttribute("atrributeName", "value"),通过这个设置更改外部css的背景颜色样式
+			def.setAttribute("style", "background-color: #D3D3D3");
+		}
+	}
+	
+	function openStep1() {
+		window.open("yiqihuaS1.html", "_self");
+	}
+
+	function choose() {
+		var check = document.getElementById("check");
+		var rrb = document.getElementById("round-rect-btn");
+		if (check.style.display === "none") {  
+			check.style.display = "block";
+			rrb.style.opacity = "1.0";  /* 恢复btn为可点击状态*/
+		} else {
+			check.style.display = "none";
+			rrb.style.opacity = "0.5";  /* 设置btn为半透明，disable状态*/
+		}
+	}
+</script>
+</body>
+</html>
+
+
+
+
+

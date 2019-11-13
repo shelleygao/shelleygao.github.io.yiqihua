@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Payment Method</title>
+	<link rel="stylesheet" href="./css/pay-meth.css" type="text/css">
+	<link rel="stylesheet" href="./css/base.css" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<!-- S title bar  -->
+	<div id="title-bar" class="clearfix">
+		<div class="title-bar-back">
+			<a href="javascript:history.go(-1);" class="icon-back"></a>
+		</div>
+		<h1>Payment Medthod</h1>
+	</div>
+	<!-- E title bar  -->
+	<div class="wrap">
+		<!-- S top add bar  -->
+	    <div id="top-bar" onclick="openWinCard()">
+	    	<div class="add"></div>
+	    	<p>Add a new card</p>
+	    </div>
+	    <!-- E top add bar  -->
+	    <!-- S card list  -->
+	    <div class="card-list clearfix">
+	    	<ul onclick="window.history.back()">  <!-- 点击返回上一页 -->
+		    	<li>
+		    		<p class="title">Debit Card****8888</p>
+		    		<div class="card-cur"></div> <!-- 仅仅出现在current li -->		    	
+		    	</li>
+		    </ul>
+	    </div>		    
+    </div>    
+    <div class="rec">
+    	<p><strong>Interest-free</strong> installment payment</p>
+    </div>
+    <div class="wrap2 card-list clearfix">
+	<ul onclick="openAct()">
+		<li>
+    		<p class="title">Yiqihua Credit Pay</p>
+    		<p class="explain">A line of credit of ￥10,000</p>
+    		<button class="actBtn" onclick="openYiqihua()">Active</button>
+    	</li>	
+    </ul>	   
+    </div>
+
+	    <!-- E card list  -->
+
+    <script>
+    	function openWinCard() {
+    		window.open("card-add.html", "_self");
+    	}
+    	function openYiqihua() {
+    		window.open("yiqihuaHome.html", "_self");
+    	}
+    </script>
+</body>
+</html>

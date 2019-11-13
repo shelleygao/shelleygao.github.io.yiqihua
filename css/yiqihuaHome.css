@@ -1,0 +1,93 @@
+@charset "utf-8";
+.wrap {
+	background-color: #fff;
+	width: 100%;
+	padding-top: 40px;
+	padding-bottom: 45px;
+	position: relative;
+}
+.wrap .img {
+	width: 250px;
+	height: 250px;
+	margin: 0 auto;
+}
+.wrap .content, .wrap .contentNext {
+	padding-top: 35px;
+	padding-bottom: 26px;
+	height: 195px;
+}
+.wrap .content p {
+	text-align: center;
+	padding: 0px 35px;
+	color: #4A4A4A;
+	line-height: 160%;
+}
+.wrap .content .yiqihuaLogo {
+	width: 68px;
+	height: 78px;
+	margin: 0 auto;
+	position: relative;
+	bottom: -40px;
+}
+/* next切换 */
+#contentNext {
+	display: none;
+}
+.wrap .contentNext .proInfo {
+	padding: 17px 16px 0 48px;
+}
+.wrap .contentNext .proInfo #radioBtn {
+	width: 20px;
+	height: 20px;
+	box-sizing: border-box;
+	border: 1px solid #707070;
+	border-radius: 4px;
+	display: inline-block;
+	float: left;
+	margin-right: 16px;
+	text-align: center;  /* 父元素设置子元素图片居中 */
+}
+.wrap .contentNext .proInfo #radioBtn img {
+	width: 16px;
+	height: 16px;
+	margin: 0 auto;  /* 图片居中 */
+}
+.wrap .contentNext .proInfo p {
+	color: #4A4A4A;
+	line-height: 160%;
+}
+.wrap .contentNext .proInfo p a {
+	text-decoration-line: underline;
+}
+.wrap .contentNext #round-rect-btn {
+	position: relative;
+	bottom: -80px;
+}
+/* 底部原点 */
+.wrap #circle {
+	padding-top: 26px;
+	margin: 0 auto;
+	width: 28px;
+	height: 8px;
+}
+.wrap #circle .cur, .wrap  #circle .default {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	border: 1px solid #D3D3D3;
+	box-sizing: border-box; 
+	margin: 0 3px;
+}
+.wrap #circle .cur {
+	background-color: #D3D3D3;
+	float: left;
+}
+.wrap #circle .default {
+	float: right;
+} 
+
+
+
+
+
+

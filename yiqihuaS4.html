@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>yiqihuaS4</title>
+	<link rel="stylesheet" href="./css/yiqihuaS4.css" type="text/css">
+	<link rel="stylesheet" href="./css/base.css" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<!-- S title bar  -->
+	<div id="title-bar" class="clearfix">
+		<div class="title-bar-back">
+			<a href="javascript:history.go(-1);" class="icon-back"></a>
+		</div>
+		<h1>Yiqihua Credit</h1>
+		<div id="close" onclick="window.location.href='pay-meth.html'"><img src="./img/icon-close.svg" alt="close"></div>
+	</div>	
+	<!-- E title bar  -->
+	<!-- S steps bar  -->
+	<div class="steps clearfix">
+					<ul class="steps-container">
+						<li class="finished progressbar" onclick="window.location.href = 'yiqihuaS1.html'">
+							<div class="step first"></div>
+							<div class="step-image"><span></span></div>
+							<div class="step-description">Identification</div>
+						</li>
+						<li class="finished progressbar" onclick="window.location.href = 'yiqihuaS2.html'">
+							<div class="step"></div>
+							<div class="step-image"><span></span></div>
+							<div class="step-description">Emergency contact</div>
+						</li>
+						<li class="finished progressbar" onclick="window.location.href = 'yiqihuaS3.html'">
+							<div class="step"></div>
+							<div class="step-image"><span></span></div>
+							<div class="step-description">Credit certification</div>
+						</li>
+						<li class="activated progressbar">
+							<div class="step last"></div>
+							<div class="step-image"><span></span></div>
+							<div class="step-description">Activation</div>
+						</li>
+					</ul>
+				</div>			
+	<!-- E steps bar  -->
+	<!-- S content  -->
+	<div class="content">
+		<p class="intro">The card you offered will become the default debit card for repayment .  </p>
+		<form action="">
+			<div class="form-card">
+				<p class="title">Card information</p>
+				<p class="info">3323****3456</p>
+			</div>
+			<div class="form-mobile">
+				<p class="title">Reserved mobile</p>
+				<p class="info">139 88888888</p>
+			</div>
+			<div class="form-code">
+				<p class="title">Verification code</p>
+				<input type="number" id="name" name="code" placeholder="Input the code">
+				<button type="button" id="border-btn" onclick="getCode()">Get the code</button> <!-- 在form标签内button需要设置button type=“button” 或 使用input type=“button”不然js执行时会效果闪现，自动刷新 -->
+			</div>
+			
+		</form>
+		<button id="round-rect-btn">Activate</button>
+	</div>
+	<!-- E content  -->
+	<script type="text/javascript">
+		function getCode() {
+			document.getElementById("name").value = "5678";
+			document.getElementById("round-rect-btn").style.opacity = "1.0";
+			document.getElementById("round-rect-btn").onclick = function() {
+				window.location.href = "yiqihuaS5.html";
+			}
+		}
+	</script>
+
+
+</body>
+</html>

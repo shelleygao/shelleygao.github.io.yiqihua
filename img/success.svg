@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="123.481" height="99.627" viewBox="0 0 123.481 99.627">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="123.481" height="99.627" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <circle id="Mask" cx="43" cy="43" r="43" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Icon_success" data-name="Icon success" clip-path="url(#clip-path)">
+    <g id="Combined_Shape" data-name="Combined Shape" transform="matrix(0.985, -0.174, 0.174, 0.985, 11.668, 14.934)">
+      <circle id="Mask-2" data-name="Mask" cx="43" cy="43" r="43" fill="none"/>
+      <g id="Combined_Shape-2" data-name="Combined Shape" clip-path="url(#clip-path-2)">
+        <path id="Combined_Shape-3" data-name="Combined Shape" d="M37.028,95.474A37.038,37.038,0,1,1,63.575,32.633c.018-.072.038-.143.057-.215l.012-.045A32.742,32.742,0,0,0,86.6,41.724a32.643,32.643,0,0,0,12.786-2.581A32.82,32.82,0,0,0,119.444,8.877,32.917,32.917,0,0,0,118.231,0a45.056,45.056,0,0,1,13.806,5.921A45.392,45.392,0,1,1,71.56,71.837,37.044,37.044,0,0,1,37.028,95.474Z" transform="translate(-35.25 31.554)" fill="#28d3a5" opacity="0.09"/>
+      </g>
+    </g>
+    <path id="Combined_Shape-4" data-name="Combined Shape" d="M47,94A47.012,47.012,0,0,1,28.706,3.694,46.96,46.96,0,0,1,80.234,13.766c.657.657,1.3,1.341,1.917,2.032l-3.037,2.6c-.545-.611-1.119-1.219-1.709-1.808a42.858,42.858,0,1,0,4.822,5.735l3.2-2.4A46.988,46.988,0,0,1,47,94Z" transform="translate(13.481 2.814)" fill="#28d3a5"/>
+    <path id="Combined_Shape-5" data-name="Combined Shape" d="M3.029,49a3.029,3.029,0,1,1,0-6.058H18.952V3.024a3.024,3.024,0,0,1,6.048,0V45.445a3.024,3.024,0,0,1-1.8,2.767A3.017,3.017,0,0,1,21.161,49Z" transform="matrix(0.695, 0.719, -0.719, 0.695, 69.922, 18.303)" fill="#28d3a5"/>
+    <g id="Oval_Copy" data-name="Oval Copy" transform="translate(17.481 90.814)" fill="none" stroke="#28d3a5" stroke-miterlimit="10" stroke-width="1.2" opacity="0.3">
+      <circle cx="2.5" cy="2.5" r="2.5" stroke="none"/>
+      <circle cx="2.5" cy="2.5" r="1.9" fill="none"/>
+    </g>
+    <g id="Oval_Copy_3" data-name="Oval Copy 3" transform="translate(117.481 21.814)" fill="none" stroke="#28d3a5" stroke-miterlimit="10" stroke-width="1.2" opacity="0.3">
+      <circle cx="3" cy="3" r="3" stroke="none"/>
+      <circle cx="3" cy="3" r="2.4" fill="none"/>
+    </g>
+    <path id="Combined_Shape-6" data-name="Combined Shape" d="M7.343,17V10.929H9.19V17Zm2.5-7.88V7.274h6.071V9.12ZM0,9.12V7.274H6.071V9.12ZM7.343,6.071V0H9.19V6.071Z" transform="translate(100.523 1.814)" fill="#28d3a5"/>
+    <path id="Fill_4_Copy" data-name="Fill 4 Copy" d="M10,6.086,7.39,3.6,7.824,0,4.808,1.772,1.644.153,2.39,3.729,0,6.334l3.478.438L5.164,10l1.4-3.3Z" transform="translate(2.612 78.036) rotate(11)" fill="none" stroke="#28d3a5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.2"/>
+    <g id="Oval_Copy-2" data-name="Oval Copy" transform="translate(19.481 13.814)" fill="none" stroke="#28d3a5" stroke-miterlimit="10" stroke-width="1">
+      <circle cx="36" cy="36" r="36" stroke="none"/>
+      <circle cx="36" cy="36" r="36.5" fill="none"/>
+    </g>
+  </g>
+</svg>

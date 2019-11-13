@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* title bar */
+.text-link {
+	color: #FE9B8E;
+	font-size: 17px;
+	float: right;
+	padding-top: 29px;
+	padding-right: 16px;
+}
+.text-link:hover {
+	color: #FE5944;
+}
+/* form */
+form input {
+	box-sizing: border-box;  /* 让border 包含在width 或 height内 */
+	width: 100%;
+	font-size: 17px;
+	padding: 12px 16px;
+	height: 45px;
+	color: #4A4A4A;
+	border: none;
+	border-bottom: 1px solid #D3D3D3;
+	outline: none;  /* 去掉点击后发光的选择框样式 */
+}
+form .wrap {
+	position: relative;
+}
+form .wrap .camera-box {
+	width: 26px;
+	height: 22px;
+	background: url(../img/icon-camera.svg) no-repeat;
+}
+form .wrap .cue-box {
+	width: 18px;
+	height: 18px;
+	background: url(../img/icon-cue.svg) no-repeat;
+}
+form .wrap .icon-right {
+	position: absolute;
+    right: 16px;
+    top: 50%;  /* 绝对定位顶部位置在父元素水平50%的位置 */
+    transform: translateY(-50%); /* 让本元素往上移动本身高度的50%，实现与父元素的水平居中 */
+}
+}

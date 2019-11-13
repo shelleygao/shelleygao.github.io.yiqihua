@@ -1,0 +1,43 @@
+@charset "utf-8";
+.content {
+	background-color: #fff;
+	padding: 48px 16px 90px;
+}
+img {
+	width: 76px;
+	height: 76px;
+	margin-left: -38px;
+}
+.zhima {
+	display: block;
+	padding-left: 50%;
+}
+.zhima #finished {
+	background: url(../img/finished.svg) no-repeat;
+	width: 21px;
+	height: 21px;
+	margin-left: -21px;
+	display: none;
+}
+p {
+	line-height: 160%;
+	text-align: center;
+}
+.content #title {
+	font-size: 20px;
+	color: #4A4A4A;
+	padding: 30px 16px 8px;
+}
+.content #description {
+	font-size: 15px;
+	color: #A0A0A0;
+	padding-bottom: 178px;
+}
+/* btn */
+div.content button#round-rect-btn {
+	opacity: 0.5;
+	position: absolute;
+	bottom: 54px;
+	left: 50%;
+	transform: translateX(-50%);
+}

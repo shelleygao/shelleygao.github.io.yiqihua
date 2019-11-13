@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Address Add</title>
+	<link rel="stylesheet" href="./css/address.css" type="text/css">
+	<link rel="stylesheet" href="./css/base.css" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div id="title-bar" class="clearfix">
+		<div class="title-bar-back">
+			<a href="order-confir.html" class="icon-back"></a>
+		</div>
+		<h1>Add an address</h1>
+		<!--
+		<input type="submit" name="add" id="add" class="text-link" value="Add" onclick="addAddress()">		
+		<a href="order-confir.html" class="text-link" onclick="backData
+		()">Add</a>  把信息收集到order confirm页 -->
+	</div>
+	<form id="form" name="form" method="get" action="order-confir.html" onsubmit="return address()">
+		<input class="form-info" name="contact" type="text" value="" placeholder="Contact name">
+		<input class="form-info" name="mobile" type="number" value="" pattern="[0-9]*" placeholder="Mobile">
+		<!--<input class="select-wrap" id="select-wrap" name="" value="">-->
+			<select id="city" class="city" name="city" type="text" value="">
+				<option value="" style="display: none">City</option>
+				<option value="Beijing">Beijing</option>
+				<option value="Shanghai">Shanghai</option>
+				<option value="Gaungzhou">Gaungzhou</option>
+				<option value="Shenzhen">Shenzhen</option>
+				<option value="Chongqin">Chongqin</option>
+				<option value="Tianjing">Tianjing</option>
+				<option value="Jiangsu">Jiangsu</option>
+				<option value="Zhejiang">Zhejiang</option>
+				<option value="Sichuan">Sichuan</option>
+				<option value="Hubei">Hubei</option>
+			</select>
+			<div class="icon-enter"></div>
+		<!--</input>-->
+		<textarea name="street" id="street" value="" onkeyup="adjustTextArea(this)" placeholder="Street"></textarea>
+		<button type="submit" name="add" id="add" class="text-link">Add</button>
+	</form>
+
+<script>
+	// document.getElementById("add").onclick = function() {
+	// 	encodeURI(window.location.href);
+	// }
+	// function onResp(str){
+	// 	location.href = "order-confir.html?result=" + str;
+	// }
+	//使textarea高度随着子行增加而增加
+	function adjustTextArea(h) {  //此处h 如何就对应上了上面onkeyup 的 this？
+		h.style.height = "1px";
+		h.style.height = (h.scrollHeight)+"px";
+	}
+	function addAddress() {
+		var form = document.getElementById("form");
+		var contact = form.contact.value;
+		var mobile = form.mobile.value;
+		var city = document.getElementById("city"); //取select id
+		var index = city.selectedIndex;  //取select被选中的option 的 index
+		var cityOption = city.options[index].text; //取被选中的option里面的文字
+		var street = form.street.value;
+		var addAddress = contact + " " + mobile + " " + cityOption + " " +street;
+		// var backData = window.opener.document.all.getElementById("top-bar").value;
+		//window.opener.document.all.getElementById("top-bar").innerHTML = "display address";
+		// alert(window.location.search);
+		window.open("order-confir.html", "_self");
+		// window.opener.document.getElementById("top-bar").p.innerHTML = addAddress;
+		// function getQueryString(form){
+		// 	var reg = new RegExp("^|&" + name +"=([^&]*)(&|$)", "i");
+		// 	var r = window.location.search.substr(1).match(reg);
+		// 	if(r != null) return unesacape(r[2]); return null;
+		// }
+				alert(r);
+	}
+</script>
+</body>
+</html>

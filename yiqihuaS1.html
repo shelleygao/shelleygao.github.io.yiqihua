@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Yiqihua step1</title>
+	<link rel="stylesheet" href="./css/yiqihuaS1.css" type="text/css">
+	<link rel="stylesheet" href="./css/base.css" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<!-- S title bar  -->
+	<div id="title-bar" class="clearfix">
+		<div class="title-bar-back">
+			<a href="javascript:history.go(-1);" class="icon-back"></a>
+		</div>
+		<h1>Yiqihua Credit</h1>
+		<div id="close" onclick="window.location.href='pay-meth.html'"><img src="./img/icon-close.svg" alt="close"></div>
+	</div>
+	<!-- E title bar  -->
+	<!-- S steps bar  -->
+	<div class="steps clearfix">
+					<ul class="steps-container">
+						<li class="activated progressbar">
+							<div class="step first"></div>
+							<div class="step-image"><span></span></div>
+							<div class="step-description">Identification</div>
+						</li>
+						<li class="progressbar">
+							<div class="step"></div>
+							<div class="step-image"><span></span></div>
+							<div class="step-description">Emergency contact</div>
+						</li>
+						<li class="progressbar">
+							<div class="step"></div>
+							<div class="step-image"><span></span></div>
+							<div class="step-description">Credit certification</div>
+						</li>
+						<li class="progressbar">
+							<div class="step last"></div>
+							<div class="step-image"><span></span></div>
+							<div class="step-description">Activation</div>
+						</li>
+					</ul>
+				</div>			
+	<!-- E steps bar  -->
+	<div class="content" id="content">
+		<p>Please upload your identification photos, notice the valid date, ensure the clarity of the images for successful vertification.</p>
+		<div class="front">
+			<div id="f-photo"><img id="id-f-p" src="./img/id-camera.svg" alt="camara"><div class="id-icon-correct"></div></div>
+			<p>Front side</p>
+		</div>
+		<div class="back">
+			<div id="b-photo"><img id="id-b-p" src="./img/id-camera.svg" alt="camara"><div class="id-icon-correct"></div></div>
+			<p>Back side</p>
+		</div>
+		<button id="round-rect-btn">Next</button>
+	</div>
+
+<script type="text/javascript">
+	var f = document.getElementById("f-photo");
+	var fi = document.getElementById("id-f-p");  //getElementsByTagName 和 getElementsByClassName 获取的都是数组，需要用x[0]索引指向
+	var iconCorrect = document.getElementsByClassName("id-icon-correct");
+	var b = document.getElementById("b-photo");
+	var bi = document.getElementById("id-b-p"); 
+	f.onclick = function() {
+		f.style.backgroundImage = "url(./img/id-f-p.svg)"; //不能按照css的写法写成f.style.background = "url(../img/id-f-p.svg) no-repeat"，在js中更改style需要一项一项属性、值对应更改，不能合成一行代码
+		f.style.backgroundRepeat = "no-repeat";
+		fi.style.display = "none";	
+		iconCorrect[0].style.display = "block";
+		iconCorrect[0].style.position = "absolute";
+		iconCorrect[0].style.top = "94px"; //父元素f-photo没有上下margin，所以js改变位置相对于父容器高度，但左右有设置margin为auto，所以js该左右位置是相对浏览器宽度来设置的
+	}
+	b.onclick = function() {
+		b.style.backgroundImage = "url(./img/id-b-p.svg)"; 
+		b.style.backgroundRepeat = "no-repeat";
+		bi.style.display = "none";	
+		iconCorrect[1].style.display = "block";
+		iconCorrect[1].style.position = "absolute";
+		iconCorrect[1].style.top = "94px";
+		// var btn = document.getElementById("round-rect-btn");
+		// 	btn.style.opacity = "1.0";
+		// 	btn.onclick = function openStep2() {
+		// 		window.open("yiqihuaS2.html", "_self");
+		// }
+	}	
+	function test() {
+        if(iconCorrect[0].style.display === "block" & iconCorrect[1].style.display === "block") { //如果正反图片都已上传，执行下面代码
+         	var btn = document.getElementById("round-rect-btn");
+         	btn.style.opacity = "1.0";
+         	btn.onclick = function openStep2() {
+         		window.open("yiqihuaS2.html", "_self");
+         	}
+        }
+    }
+
+    var content = document.getElementById("content");
+	content.addEventListener("click", test, false);  //用addEventListener监听click事件，如有发生执行test函数
+</script>
+
+
+</body>
+</html>
